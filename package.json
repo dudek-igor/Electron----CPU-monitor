@@ -2,7 +2,7 @@
   "name": "sys-top",
   "productName": "SysTop",
   "version": "1.0.0",
-  "description": " RealTime CPU monitor with notifications and system tray",
+  "description": "RealTime CPU monitor with notifications and system tray",
   "main": "main.js",
   "scripts": {
     "start": "electron .",
