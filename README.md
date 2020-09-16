@@ -1,6 +1,6 @@
 ## Hello :wave:
 
-## CPU Monitor
+### CPU Monitor
 
 > RealTime CPU monitor with notifications and system tray
 
@@ -23,6 +23,7 @@
 - Electron-packager,
 - Electron-log,
 - Nodemon,
+- Node-os-utils,
 
 ### License
 
