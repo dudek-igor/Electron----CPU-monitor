@@ -68,7 +68,6 @@
 		<script src="js/tabs.js"></script>
     <script src="js/monitor.js"></script>
     <script>
-      const { ipcRenderer } = require('electron');
       const settingsForm =  document.getElementById('settings-form')
       // Get settings
       ipcRenderer.on('settings:get', (e, settings)=>{
@@ -85,7 +84,16 @@
           cpuOverload,
           alertFrequency
         })
+        showAlert('Settings Saved')
       })
+      // Show Alert for settings
+      function showAlert(msg) {
+        const alert = document.getElementById('alert');
+        alert.classList.remove('hide');
+        alert.classList.add('alert');
+        alert.innerText = msg;
+        setTimeout(()=>alert.classList.add('hide'),5000)
+      }
     </script>
 	</body>
 </html>
