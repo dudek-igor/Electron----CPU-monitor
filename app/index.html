@@ -68,7 +68,9 @@
 		<script src="js/tabs.js"></script>
     <script src="js/monitor.js"></script>
     <script>
+      // Variables
       const settingsForm =  document.getElementById('settings-form')
+      const nav =  document.getElementById('nav')
       // Get settings
       ipcRenderer.on('settings:get', (e, settings)=>{
         document.getElementById('cpu-overload').value = settings.cpuOverload;
@@ -94,6 +96,10 @@
         alert.innerText = msg;
         setTimeout(()=>alert.classList.add('hide'),5000)
       }
+      // Toggle nav
+      ipcRenderer.on("nav:toggle",()=>{
+        nav.classList.toggle('hide');
+      })
     </script>
 	</body>
 </html>
